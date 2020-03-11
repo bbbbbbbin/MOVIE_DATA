@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 __author__ = 'chenshini'
 
@@ -140,7 +140,8 @@ def download_boxoffice_as_excel(start_year,end_year, export_path):
             #sheet.write(j,4,years[j])
     book.save(export_path)
 
-download_boxoffice_as_excel(2017,2018,'../data/boxoffice_{}.xls'.format(2017))
+for i in range(0,7):
+    download_boxoffice_as_excel(2010+i,2011+i,'../data/boxoffice_{}.xls'.format(2010+i))
 
 # 从58921.com下载每一年的电影总票房
 # 输入为 开始年份 结束年份 导出的excel路径
